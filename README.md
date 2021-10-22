@@ -12,11 +12,10 @@
 
 <!-- overview -->
 
-<img width="1440" alt="Screenshot of the TaskDo Login" src="./images/ss1.png">
-<img width="1440" alt="Screenshot of the TaskDo Auth0 Login" src="./images/ss2.png">
-<img width="1440" alt="Screenshot of the TaskDo App" src="./images/ss3.png">
-<img width="1440" alt="Screenshot of the TaskDo App" src="./images/ss4.png">
-
+<img width="1440" alt="Screenshot of the TaskDo Login" src="./src/images/ss1.png">
+<img width="1440" alt="Screenshot of the TaskDo Auth0 Login" src="./src/images/ss2.png">
+<img width="1440" alt="Screenshot of the TaskDo App" src="./src/images/ss3.png">
+<img width="1440" alt="Screenshot of the TaskDo App" src="./src/images/ss4.png">
 
 <!-- Built with -->
 
@@ -37,12 +36,12 @@
 
 - Step3: Now write your task and click the + Button to Add your task to the List.
 
-- Step4: You can click the checkbox to mark the task complete. 
+- Step4: You can click the checkbox to mark the task complete.
 
 - Step5: After completing the task you can delete them from the list by clicking the bin icon.
 
 - Step6: After completing your all tasks you can Logout.
 
-
 <!-- additional information -->
+
 - Note: User can logout and login again, but the data won't be lost as it is saved locally.

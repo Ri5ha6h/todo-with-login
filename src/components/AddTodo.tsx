@@ -29,7 +29,7 @@ const AddTodo: FC<AddTodoProps> = ({
           onChange={changeTodo}
         />
         <button
-          className='py-3 tracking-wide text-white px-7 rounded-xl lg:text-3xl bg-purp-100'
+          className='py-3 ml-3 tracking-wide text-white px-7 rounded-xl lg:text-3xl bg-purp-100'
           type='submit'
           aria-label='add todo'
         >

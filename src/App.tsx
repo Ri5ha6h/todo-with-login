@@ -14,32 +14,24 @@ const App = () => {
 
   return (
     <>
-      <Suspense
-        fallback={
-          <div className='tracking-widest text-green-600'>
-            Loading...
-          </div>
-        }
-      >
-        <BrowserRouter>
-          <Switch>
-            <Route path={['/', '/login']} exact>
-              {isAuthenticated ? (
-                <Redirect to='/todo' />
-              ) : (
-                <LoginPage />
-              )}
-            </Route>
-            <Route path={'/todo'} exact>
-              {isAuthenticated ? (
-                <TodoPage />
-              ) : (
-                <Redirect to='/login' />
-              )}
-            </Route>
-          </Switch>
-        </BrowserRouter>
-      </Suspense>
+      <BrowserRouter>
+        <Switch>
+          <Route path={['/', '/login']} exact>
+            {isAuthenticated ? (
+              <Redirect to='/todo' />
+            ) : (
+              <LoginPage />
+            )}
+          </Route>
+          <Route path={'/todo'} exact>
+            {isAuthenticated ? (
+              <TodoPage />
+            ) : (
+              <Redirect to='/login' />
+            )}
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 };

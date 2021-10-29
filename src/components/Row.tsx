@@ -1,9 +1,11 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { MdDelete } from 'react-icons/md';
 
+// add a prop for date to show in row todo
 interface Todo {
   id: string;
   task: string;
+  date: string;
   isCompleted: boolean;
 }
 
@@ -14,10 +16,20 @@ interface TodoProps {
 }
 
 const Row: FC<TodoProps> = ({
-  todo: { task, isCompleted, id },
+  todo: { task, isCompleted, id, date },
   deleteTodo,
   checkTodo,
 }) => {
+  const d = new Date();
+  const t = new Date(date);
+  let dateTheme;
+  if (t > d) {
+    dateTheme = 'text-green-500';
+  } else {
+    dateTheme = 'text-red-500';
+  }
+ 
+
   return (
     <div
       className={`flex items-center w-full mt-10 lg:w-1/2 ${
@@ -39,6 +51,7 @@ const Row: FC<TodoProps> = ({
         />
       </div>
       <p className='ml-5 text-2xl'>{task}</p>
+      <span className={dateTheme}>{date}</span>
     </div>
   );
 };

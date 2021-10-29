@@ -28,7 +28,6 @@ const Row: FC<TodoProps> = ({
   } else {
     dateTheme = 'text-red-500';
   }
- 
 
   return (
     <div
@@ -51,7 +50,9 @@ const Row: FC<TodoProps> = ({
         />
       </div>
       <p className='ml-5 text-2xl'>{task}</p>
-      <span className={dateTheme}>{date}</span>
+      <span className={'ml-7 ' + dateTheme}>
+        {date}
+      </span>
     </div>
   );
 };
